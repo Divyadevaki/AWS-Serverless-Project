@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Records</title>
+	
+	 <style>
+        body {     
+            display:flex;		
+            justify-content: center;            
+            background-color: #f2f2f2;			 
+        }
+		.Employee-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+    .Employee-container h2 {
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #333333;
+    }
+
+    .Employee-container input {
+        width: 100%;  	
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+    }
+
+        .Employee-container input[type=checkbox] {
+            width: auto;
+        }
+
+    .Employee-container button {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: none;
+        background-color: #007bff;
+        color: #ffffff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+        .Employee-container button:hover {
+            background-color: #0056b3;
+        }
+		table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+	
+	</head>	
+	<body>
+
+<div class="Employee-container">
+      
+    <form>
+        
+                    <h1 id="headerid"> Save Employee Details</h1>
+                 
+                    <div>                      
+                        <div class="col">
+                            <label>Employee Id</label>
+                            <input id="employee_id" name="employee_id" placeholder="Enter the Employee Id" type="text" maxlength="7" />
+                        </div>
+						  <div class="col">
+                            <label>Employee Name</label>
+                            <input id="employee_name" name="employee_name" placeholder="Enter the Employee Name" class="textvalidate" maxlength="12" />
+                        </div>
+						 <div  class="col">
+                            <label>Department</label>
+                            <input id="department" name="department" placeholder="Enter the Department" type="text" />
+                        </div>
+                        <div  class="col">
+                            <label>Salary</label>
+                            <input id="salary" name="salary" placeholder="Enter the Salary" class="Numericvalidate" />
+                        </div>
+                       
+                        <div  class="col">
+                            <label>Date Of Birth</label>
+                            <input id="dob" name="dob" placeholder="select Date Of Birth" max="2020-12-31" type="Date" />
+                        </div>
+
+                    </div>
+                    <div style="text-align:center">
+                        <button id="Idsavedata" style="width:45%;background-color:green" type="button">Save Data</button>
+                        <button id="cancelid" style="width:45%;background-color:red" type="button">Cancel</button>
+						<button type="button" id="idViewdetails">View Employee Records</button>		
+                    </div>         
+  		
+    </form>
+	<b id="EmployeeSaved"></b>			  			
+</div>
+<div id="showEmployee" hidden class="Employee-container">
+<div id="closebtn" style="text-align:right;color:red;font-size:25px">
+   <span aria-hidden="true" style="height:20px;width:20px"><b>&times;</b></span>
+    </div>
+            <table id="EmployeeTable" class="table table-bordered table-responsive">
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+					<col style="width:20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                <th>Employee Id</th>			
+                <th>Employee Name</th>
+				<th>Department</th>
+                <th>Salary</th>                
+                <th>DOB</th>                                
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="Myscript.js"></script>
+</body>
+</html>
